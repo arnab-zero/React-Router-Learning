@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 const Users = () => {
   const userInfoStyle = {
@@ -22,6 +22,8 @@ const Users = () => {
             <h2>Name: {user.name}</h2>
             <p>Username: {user.username}</p>
             <p>Email: {user.email}</p>
+            {/* <Link to="/user/:id">View Details</Link> */}
+            <Link to={`/users/${user.id}`}>Show Details</Link>
           </div>
         ))}
       </div>
